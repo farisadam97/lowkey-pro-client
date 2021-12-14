@@ -1,0 +1,424 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Ini adalah repository RESTful API yang menjadi basis untuk teman-teman berkreasi di challenge chapter 8. Ikuti petunjuk di bawah dengan seksama untuk memastikan teman-teman dapat menjalankan RESTful API.",
+    "version": "1.0.0",
+    "title": "Binar Academy Bootcamp - FSW - Chapter 8 - Challenge"
+  },
+  "host": "localhost:3030",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "players",
+      "description": "Everything about your players"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/players": {
+      "post": {
+        "tags": [
+          "players"
+        ],
+        "summary": "Add a new pet to the store",
+        "description": "",
+        "operationId": "addPlayer",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Players that needs to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Players"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/ApiResponse"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "$ref": "#/definitions/CreateNewPlayer"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "players"
+        ],
+        "summary": "Get All Players",
+        "description": "Get All Players",
+        "operationId": "findPlayers",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CreateNewPlayer"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/players/{playerid}": {
+      "get": {
+        "tags": [
+          "players"
+        ],
+        "summary": "Find pet by IDPlayer",
+        "description": "Returns a single Players",
+        "operationId": "getPetById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "playerid",
+            "in": "path",
+            "description": "Player ID return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/ApiResponse"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "$ref": "#/definitions/CreateNewPlayer"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "Invalid ID Players"
+          },
+          "404": {
+            "description": "Pet not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "players"
+        ],
+        "summary": "Update an existing Players",
+        "description": "",
+        "operationId": "updatePLayer",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+       
+        "parameters": [
+          {
+            "name": "playerid",
+            "in": "path",
+            "description": "Player ID return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Pet object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdatePlayers"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/ApiResponse"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "$ref": "#/definitions/CreateNewPlayer"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "Cannot update Player with id=${id}. Maybe Player was not found or req.body is empty!"
+          },
+          "500": {
+            "description": "Error updating Player with id=id"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "players"
+        ],
+        "summary": "Deletes a Players",
+        "description": "",
+        "operationId": "deletePet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+         
+          {
+            "name": "playerid",
+            "in": "path",
+            "description": "playerid to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Player was deleted successfully!"
+          },
+          "400": {
+            "description": "Cannot delete Player with id=${id}. Maybe Player was not found!"
+          }
+        }
+      }
+    },
+      "/players/exp/{playerid}": {
+      "post": {
+        "tags": [
+          "players"
+        ],
+        "summary": "Updates a exp players",
+        "description": "",
+        "operationId": "updatePetWithForm",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "playerid",
+            "in": "path",
+            "description": "playerid that needs to be updated",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "experience",
+            "in": "body",
+            "description": "Updated experience",
+            "required": true, 
+            "schema": {
+              "$ref": "#/definitions/Experience"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/ApiResponse"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "$ref": "#/definitions/Experience"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+
+   
+  },
+  "definitions": {
+    "Players": {
+      "type": "object",
+      "required": [
+        "id",
+        "username",
+        "email",
+        "password",
+        "exp",
+        "lvl"
+      ],
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nama player"
+        },
+        "email": {
+          "type": "string",
+          "example": "players@email.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "password"
+        },
+        "exp": {
+          "type": "string",
+          "example": "1000",
+          "description": "experience"
+        },
+        "lvl": {
+          "type": "string",
+          "description": "level player"
+        }
+      }
+    },
+    "Experience": {
+      "type": "object",
+      "required": [
+        "id",
+        "exp"
+      ],
+      "properties": {
+        
+        "exp": {
+          "type": "string",
+          "example": "1000",
+          "description": "experience"
+        }
+      }
+    },
+     "UpdatePlayers": {
+      "type": "object",
+      "required": [
+        "username",
+        "email",
+        "password",
+        "exp"
+      ],
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nama player"
+        },
+        "email": {
+          "type": "string",
+          "example": "players@email.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "password"
+        },
+        "exp": {
+          "type": "string",
+          "example": "1000",
+          "description": "experience"
+        }
+      }
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string",
+          "example": "SUCCESS"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "CreateNewPlayer": {
+      "type": "object",
+      "properties": {
+          "id": {
+            "type": "int64",
+            "example": "0"
+          },
+          "username": {
+            "type": "string",
+            "example": "nama player"
+          },
+          "email": {
+            "type": "string",
+            "example": "players@email.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "password"
+          },
+          "exp": {
+            "type": "string",
+            "example": "1000",
+            "description": "experience"
+          },
+          "lvl": {
+            "type": "int64",
+            "example": "1"
+          },
+          "updatedAt": {
+            "type": "date-time",
+            "example": "2021-12-11T05:46:30.945Z"
+          },
+          "createdAt": {
+            "type": "date-time",
+            "example": "2021-12-11T05:46:30.945Z"
+          }
+        }
+      }
+    }
+  }
