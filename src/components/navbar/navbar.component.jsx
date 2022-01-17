@@ -129,7 +129,11 @@ const ResponsiveAppBar = () => {
           </Box>
           <Stack spacing={1} direction="row" sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
               <Button variant="contained">Register</Button>
-              <Button variant="contained">Login</Button>
+              <Button variant="contained">
+                <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
+                  Login
+                </Link>
+              </Button>
             </Stack>
         </Toolbar>
       </Container>
