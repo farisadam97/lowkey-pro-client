@@ -1,6 +1,6 @@
 import FirstPage from './pages/FirstPage/FirstPage.pages';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Login from './components/navbar/navbar.component';
+import Login from './pages/login/Login.page';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
     //   <h1>{process.env.REACT_APP_API_URL}</h1>
     //   <h1>{process.env.REACT_APP_API_KEY}</h1>
     // </div>
-    <div maxWidth="sm">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FirstPage></FirstPage>} />
