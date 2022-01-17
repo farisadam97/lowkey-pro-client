@@ -10,7 +10,7 @@ function App() {
     //   <h1>{process.env.REACT_APP_API_URL}</h1>
     //   <h1>{process.env.REACT_APP_API_KEY}</h1>
     // </div>
-    <div maxWidth="sm">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FirstPage></FirstPage>} />
