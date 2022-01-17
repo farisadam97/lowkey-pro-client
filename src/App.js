@@ -1,6 +1,6 @@
 import FirstPage from './pages/FirstPage/FirstPage.pages';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Login from './components/navbar/navbar.component';
+import Login from './pages/login/Login.page';
 
 function App() {
   return (
