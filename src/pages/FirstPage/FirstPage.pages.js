@@ -34,7 +34,7 @@ const FirstPage = () => {
 							xs: 30
 						}}
 					>
-						PLAY TRADITIONAL GAME
+						LOWKEY GAME
 					</Typography>
 					<Typography textAlign="center" color="white" variant="h4"
 						paddingTop={{
