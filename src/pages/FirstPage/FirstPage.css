@@ -1,0 +1,141 @@
+.section-home
+{
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 90%, #000 100%), url('../../images/main-bg.jpg');
+    background-position: center bottom -100px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+	height: 90vh;
+}
+.section-home-button
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+.section-home-arrow
+{
+    margin-top: -50px;
+	text-align:center;
+}
+
+.section-feature
+{
+	padding-top:100px;
+	padding-bottom:100px;
+	background: url('../../images/the-games-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.section-system-requirement
+{
+	padding-top:100px;
+	padding-bottom:100px;
+	background: url('../../images/requirements.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.section-top-score
+{
+	padding-top:100px;
+	padding-bottom:100px;
+	background: #090a0c;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.section-newsletter
+{
+	padding-top:100px;
+	padding-bottom:100px;
+	background: url('../../images/top-score-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #19191a;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+	margin-bottom:1.5rem;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+.card-col-1 {
+    float: left;
+    width: 100px;
+}
+.card-col-2 {
+    float: left;
+    width: auto;
+}
+.card-col-3 {
+    float: right;
+    width: 10%;
+    text-align: right;
+}
+.section-person-img {
+    border: 3px solid #FFB548;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    max-width: 73px;
+}
+
+@media screen and (max-width:767px)
+{
+	.section-home
+	{
+		background-position: center bottom;
+		height: 400px;
+	}
+	.section-home-arrow
+	{
+		margin-top: -50px;
+	}
+	.section-feature img, .section-system-requirement img, .section-newsletter img
+	{
+		width:100%;
+	}
+	.mobile-full
+	{
+		display:block!important;
+	}
+	.mobile-padding-top-50
+	{
+		padding-top:50px;
+	}
+}
+@media screen and (min-width: 768px)
+{
+	.card {
+		clear: both;
+		max-width: 454px;
+	}
+	.card1 {
+		float: right;
+	}
+	.card3 {
+		float: right;
+		margin-right: 10%;
+	}
+}
