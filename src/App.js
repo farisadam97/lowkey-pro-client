@@ -1,7 +1,8 @@
 import FirstPage from './pages/FirstPage/FirstPage.pages';
 import TopScore from './pages/TopScore/TopScore';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Login from './components/navbar/navbar.component';
+import Login from './pages/login/Login.page';
+import Register from './pages/Register/Register';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<FirstPage></FirstPage>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/top-score" element={<TopScore/>} />
+          <Route path="/register" element={<Register/>} />
         </Routes>
       </BrowserRouter>
     </div>
