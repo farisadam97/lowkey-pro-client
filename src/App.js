@@ -2,6 +2,7 @@ import FirstPage from './pages/FirstPage/FirstPage.pages';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Login from './components/navbar/navbar.component';
 import Register from './pages/Register/Register';
+import Profile from  './pages/profile/Edit.pages';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<FirstPage></FirstPage>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/top-score" element={<TopScore/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/profile" element={<Profile/>} />
         </Routes>
       </BrowserRouter>
     </div>

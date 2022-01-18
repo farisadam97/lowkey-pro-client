@@ -21,6 +21,7 @@ const pages = [
   {name: "System Requirement", route: "/system-requirement"},
   {name: "Top Score", route: "/top-score"}, 
   {name: "News Latter", route: "/news-latter"}, 
+  {name: "Profile", route: "/profile"}, 
 ];
 
 
