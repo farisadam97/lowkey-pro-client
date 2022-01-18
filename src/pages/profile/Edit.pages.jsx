@@ -3,12 +3,14 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import FormProfile from "../../components/FormProfile/EditProfile.component";
-import NavBar from "../../components/navbar/navbar.component";
+import NavBar from "../../components/navbar/navbarlogin.component";
 
 const Register = () => {
     return(
+        <div>
+             <NavBar />
         <Container maxWidth="xl">
-            <NavBar />
+           
             <Box sx={{ mt:3 ,  height: '100vh' }} >
                 <Typography variant="h3" component="div" gutterBottom>
                     My Profile
@@ -16,6 +18,7 @@ const Register = () => {
                 <FormProfile />
             </Box>
         </Container>
+        </div>
     )
 }
 

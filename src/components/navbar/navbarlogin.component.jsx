@@ -100,13 +100,15 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
               ))}
               <Stack spacing={1} direction="row">
-              <Button variant="contained"><Link
-                    style={{  textDecoration: 'none', color: 'black' }}
-                    to="/register"
-                    >
-                     Register
-                    </Link></Button>
-                <Button variant="contained">Login</Button>
+                <Button variant="contained"> 
+                  <Link style={{ textDecoration: 'none', color: '#fff' }} to="/profile">
+                    My Profile
+                  </Link></Button>
+                <Button variant="contained">
+                  <Link style={{ textDecoration: 'none', color: '#fff' }} to="/logout">
+                    Logout
+                  </Link>
+                </Button>
               </Stack> 
             </Menu> 
           </Box>
@@ -138,10 +140,7 @@ const ResponsiveAppBar = () => {
             
           </Box>
           <Stack spacing={1} direction="row" sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="contained"> 
-                <Link style={{ textDecoration: 'none', color: '#fff' }} to="/register">
-                  Sign In
-                </Link></Button>
+              <Button variant="contained">Register</Button>
               <Button variant="contained">
                 <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
                   Login
