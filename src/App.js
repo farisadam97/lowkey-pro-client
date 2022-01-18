@@ -1,6 +1,7 @@
 import FirstPage from './pages/FirstPage/FirstPage.pages';
+import TopScore from './pages/TopScore/TopScore';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Login from './components/navbar/navbar.component';
+import Login from './pages/login/Login.page';
 import Register from './pages/Register/Register';
 import Profile from  './pages/profile/Edit.pages';
 

@@ -1,0 +1,11 @@
+.page-top-score
+{
+	padding-top:60px;
+	padding-bottom:60px;
+	background: #090a0c;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+	min-height:70vh;
+}
