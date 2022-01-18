@@ -1,6 +1,7 @@
 import FirstPage from './pages/FirstPage/FirstPage.pages';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Login from './pages/login/Login.page';
+import Login from './components/navbar/navbar.component';
+import Register from './pages/Register/Register';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FirstPage></FirstPage>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
         </Routes>
       </BrowserRouter>
     </div>
