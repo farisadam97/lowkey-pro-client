@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Login from './pages/login/Login.page';
 import Register from './pages/Register/Register';
 import Profile from  './pages/profile/Edit.pages';
+import RPSGame from  './pages/RPSGame/RPSGame';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/top-score" element={<TopScore/>} />
           <Route path="/register" element={<Register/>} />
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/rps-game" element={<RPSGame/>} />
         </Routes>
       </BrowserRouter>
     </div>
