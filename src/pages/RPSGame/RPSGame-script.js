@@ -1,3 +1,5 @@
+import React, {useState} from "react";
+
 let computerScore = 1;
 let playerScore = 1;
 const pScore = document.getElementById('playerScore');
@@ -181,3 +183,5 @@ function refresh()
 		document.getElementById(comIconId[i]).classList.remove("selected");
 	}
 }
+
+export {refresh, game};
