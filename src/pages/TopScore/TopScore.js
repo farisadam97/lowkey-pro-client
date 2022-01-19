@@ -11,7 +11,7 @@ const TopScore = () => {
 			<div class="page-top-score">
 				<Container maxWidth="xl">
 					<div>
-						<Typography color="white" variant="h3"
+						<Typography variant="h3"
 							fontSize={{
 								lg: 50,
 								md: 40,
@@ -19,9 +19,9 @@ const TopScore = () => {
 								xs: 20
 							}}
 						>
-							LIST TOP SCORES
+							List Top Scores
 						</Typography>
-						<Typography color="white" 
+						<Typography 
 							fontSize={{
 								lg: 24,
 								md: 20,
@@ -34,9 +34,21 @@ const TopScore = () => {
 						
 						<br /> <br />
 						
-						<div style={{ paddingTop:"50px", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gridGap: 20 }}>
+						<div class="tableleaderboardhead" style={{ borderBottom:"1px solid black", paddingTop:"50px", display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
 							<div>
-								<Typography color="white" variant="h3"
+								<Typography variant="h3"
+									fontSize={{
+										lg: 30,
+										md: 30,
+										sm: 20,
+										xs: 14
+									}}
+								>
+									No
+								</Typography>
+							</div>
+							<div>
+								<Typography variant="h3"
 									fontSize={{
 										lg: 30,
 										md: 30,
@@ -48,7 +60,7 @@ const TopScore = () => {
 								</Typography>
 							</div>
 							<div>
-								<Typography color="white" variant="h3"
+								<Typography variant="h3"
 									fontSize={{
 										lg: 30,
 										md: 30,
@@ -60,7 +72,7 @@ const TopScore = () => {
 								</Typography>
 							</div>
 							<div>
-								<Typography color="white" variant="h3"
+								<Typography variant="h3"
 									fontSize={{
 										lg: 30,
 										md: 30,
@@ -72,7 +84,7 @@ const TopScore = () => {
 								</Typography>
 							</div>
 							<div>
-								<Typography color="white" variant="h3"
+								<Typography variant="h3"
 									fontSize={{
 										lg: 30,
 										md: 30,
@@ -84,7 +96,7 @@ const TopScore = () => {
 								</Typography>
 							</div>
 							<div>
-								<Typography color="white" variant="h3"
+								<Typography variant="h3"
 									fontSize={{
 										lg: 30,
 										md: 30,
@@ -97,192 +109,230 @@ const TopScore = () => {
 							</div>
 						</div>
 							
-						<div style={{ paddingTop:"20px", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gridGap: 20 }}>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									Abc
-								</Typography>
+						<div class="tableleaderboard">
+							<div class="tableleaderboardrow" style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										1
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										Abc
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										abc@gmail.com
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										abctest
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										Jakarta
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										200
+									</Typography>
+								</div>
 							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									abc@gmail.com
-								</Typography>
+							
+							<div class="tableleaderboardrow" style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										2
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										Xyz
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										xyz@gmail.com
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										xyztest
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										Bali
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										120
+									</Typography>
+								</div>
 							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									abctest
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									Jakarta
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									200
-								</Typography>
-							</div>
-						</div>
-						
-						<div style={{ paddingTop:"20px", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gridGap: 20 }}>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									Xyz
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									xyz@gmail.com
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									xyztest
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									Bali
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									120
-								</Typography>
-							</div>
-						</div>
-						
-						<div style={{ paddingTop:"20px", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gridGap: 20 }}>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									Def
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									def@outlook.com
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									deftest
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									Surabaya
-								</Typography>
-							</div>
-							<div>
-								<Typography color="white" 
-									fontSize={{
-										lg: 20,
-										md: 20,
-										sm: 16,
-										xs: 12
-									}}
-								>
-									110
-								</Typography>
+							
+							<div class="tableleaderboardrow" style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										3
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										Def
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										def@outlook.com
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										deftest
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										Surabaya
+									</Typography>
+								</div>
+								<div>
+									<Typography 
+										fontSize={{
+											lg: 20,
+											md: 20,
+											sm: 16,
+											xs: 12
+										}}
+									>
+										110
+									</Typography>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -1,11 +1,25 @@
 .page-top-score
 {
-	padding-top:60px;
-	padding-bottom:60px;
-	background: #090a0c;
+	padding-top:25px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
 	min-height:70vh;
+}
+.tableleaderboard .tableleaderboardrow:nth-child(odd)
+{
+	background:#efefef;
+}
+.tableleaderboard .tableleaderboardrow:hover
+{
+	background:#cfebff;
+}
+.tableleaderboardhead div
+{
+	padding: 3px 10px;
+}
+.tableleaderboard .tableleaderboardrow div
+{
+	padding: 6px 10px;
 }
