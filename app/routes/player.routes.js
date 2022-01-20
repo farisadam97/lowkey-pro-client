@@ -22,6 +22,7 @@ module.exports = app => {
 
   // Game Players  Endpoints
   router.post("/score", gamehistory.create);
-  // API prefix
+
+  // API prefix Dokumentasi
   app.use("/api", router);
 };
