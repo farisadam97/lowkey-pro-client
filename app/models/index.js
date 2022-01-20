@@ -18,6 +18,9 @@ const db = {};
 db.Sequelize = Sequelize;
 db.client = client;
 
-db.players = require("./player.model.js")(client, Sequelize);
+db.users = require("./user.model.js")(client, Sequelize);
+db.game_histories = require("./gamehistory.model.js")(client, Sequelize);
+db.gamers = require("./game.model.js")(client, Sequelize);
+db.achievements = require("./achievement.model.js")(client, Sequelize);
 
 module.exports = db;

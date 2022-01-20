@@ -1,16 +1,27 @@
 module.exports = app => {
-  const players = require("../controllers/player.controller.js");
+  const players = require("../controllers/user.controller.js");
+  const gamers = require("../controllers/game.controller.js");
+  const gamehistory = require("../controllers/gamehistory.controller.js");
 
   var router = require("express").Router();
+
+  // Access Endpoints
+  router.post("/login", players.login);
 
   // Player Endpoints
   router.post("/players", players.create);
   router.get("/players", players.findAll);
   router.get("/players/:id", players.findById);
   router.put("/players/:id", players.update);
-  router.post("/players/exp/:id", players.getExperience);
   router.delete("/players/:id", players.delete);
 
+  // Game  Endpoints
+  router.post("/new-game", gamers.create); 
+  router.get("/gamers", gamers.findAll);
+  router.get("/gamers/:id", gamers.findById);
+
+  // Game Players  Endpoints
+  router.post("/score", gamehistory.create);
   // API prefix
   app.use("/api", router);
 };
