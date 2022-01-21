@@ -6,6 +6,7 @@ import Register from './pages/Register/Register';
 import Profile from  './pages/profile/Edit.pages';
 import RPSGame from  './pages/RPSGame/RPSGame';
 import HomePage from  './pages/HomePage/HomePage';
+import GameHistory from  './pages/GameHistory/GameHistory';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/profile" element={<Profile/>} />
           <Route path="/rps-game" element={<RPSGame/>} />
           <Route path="/home-page" element={<HomePage/>} />
+          <Route path="/game-history" element={<GameHistory/>} />
         </Routes>
       </BrowserRouter>
     </div>
