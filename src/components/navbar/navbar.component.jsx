@@ -137,14 +137,6 @@ const ResponsiveAppBar = () => {
                 </>
               ) 
             }
-
-              {/* <Button variant="contained"><Link
-                    style={{  textDecoration: 'none', color: 'black' }}
-                    to="/register"
-                    >
-                     Register
-                    </Link></Button>
-                <Button variant="contained">Login</Button> */}
               </Stack> 
             </Menu> 
           </Box>
