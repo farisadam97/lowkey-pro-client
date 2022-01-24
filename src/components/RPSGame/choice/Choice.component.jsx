@@ -1,6 +1,9 @@
 import {settings} from '../config/game';
 import './Choice.css';
 
+import Typography from '@mui/material/Typography';
+import imgfacebook from '../../../images/facebook.svg';
+import imgtwitter from '../../../images/twitter-white.svg';
 
 export const Choice = ({ value, id, className, choiceIcon, onClick }) => {
     console.log(settings)
@@ -25,6 +28,21 @@ export const Selection = ({children, userScore, trophyIcon}) => {
             <>
             <img src={trophyIcon} className='trophyStyle' alt="trophy" />
             <h3 style={{textAlign:"center"}}>Victory!</h3>
+			
+			<Typography style={{textAlign:"center"}}
+				fontSize={{
+					lg: 18,
+					md: 16,
+					sm: 14,
+					xs: 12
+				}}
+			>
+				Share to social media
+			</Typography>
+			<div style={{textAlign:"center"}}>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flowkeypro.netlify.app%2F&quote=I won this Rock Paper Scissor Game and you should try it too" target="_new" class="iconshare iconsharefb"><img src={imgfacebook} alt="Facebook" /></a>
+				<a href="https://twitter.com/intent/tweet?text=I won this Rock Paper Scissor Game and you should try it too https://lowkeypro.netlify.app/" target="_new" class="iconshare iconsharett"><img src={imgtwitter} alt="Twitter" /></a>
+			</div>
             </>
         )}
         </>
@@ -46,6 +64,21 @@ export const SelectionComputer = ({children, pcScore, trophyIcon}) => {
                 <>
                 <img src={trophyIcon} className='trophyStyle' alt="trophy" />
                 <h3 style={{textAlign:"center"}}>Victory!</h3>
+			
+				<Typography style={{textAlign:"center"}}
+					fontSize={{
+						lg: 18,
+						md: 16,
+						sm: 14,
+						xs: 12
+					}}
+				>
+					Share to social media
+				</Typography>
+				<div style={{textAlign:"center"}}>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flowkeypro.netlify.app%2F&quote=Check out this cool Rock Paper Scissor Game" target="_new" class="iconshare iconsharefb"><img src={imgfacebook} alt="Facebook" /></a>
+					<a href="https://twitter.com/intent/tweet?text=Check out this cool Rock Paper Scissor Game https://lowkeypro.netlify.app/" target="_new" class="iconshare iconsharett"><img src={imgtwitter} alt="Twitter" /></a>
+				</div>
                 </>
             )}
         </>
