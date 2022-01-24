@@ -7,6 +7,7 @@ import Profile from  './pages/profile/Edit.pages';
 import RPSGame from  './pages/RPSGame/RPSGame';
 import HomePage from  './pages/HomePage/HomePage';
 import GameHistory from  './pages/GameHistory/GameHistory';
+import GameList from './pages/GameList/GameList';
 import { ProtectedRoute } from './Protectedroute';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/rps-game" element={<RPSGame/>} />
           <Route path="/home-page" element={<HomePage/>} />
           <Route path="/game-history" element={<GameHistory/>} />
+          <Route path="/game-list" element={<GameList/>} />
         </Routes>
       </BrowserRouter>
     </div>
