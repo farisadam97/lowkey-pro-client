@@ -44,6 +44,13 @@ const ResponsiveAppBar = () => {
     background: "black",
     opacity: 0.8
   }
+  const onLogoutClick =  (e) => {
+    e.preventDefault();
+    window.localStorage.clear();
+    alert("Anda telah logout");
+  }
+  const isUserLogin = localStorage.getItem('status');
+  console.log(isUserLogin)
   return (
     <AppBar position="static" style={navbarStyle}>
       <Container maxWidth="xl">
@@ -100,13 +107,44 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
               ))}
               <Stack spacing={1} direction="row">
-              <Button variant="contained"><Link
+              {
+              isUserLogin === "Login Success" ? 
+              (
+                <>
+                  <Button variant="contained"> 
+                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/profile">
+                      My Profile
+                    </Link>
+                  </Button>
+                  <Button variant="contained" color="error" onClick={onLogoutClick}> 
+                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
+                      Logout
+                    </Link>
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button variant="contained"> 
+                  <Link style={{ textDecoration: 'none', color: '#fff' }} to="/register">
+                    Sign In
+                  </Link>
+                  </Button>
+                  <Button variant="contained">
+                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
+                      Login
+                    </Link>
+                  </Button>
+                </>
+              ) 
+            }
+
+              {/* <Button variant="contained"><Link
                     style={{  textDecoration: 'none', color: 'black' }}
                     to="/register"
                     >
                      Register
                     </Link></Button>
-                <Button variant="contained">Login</Button>
+                <Button variant="contained">Login</Button> */}
               </Stack> 
             </Menu> 
           </Box>
@@ -138,19 +176,36 @@ const ResponsiveAppBar = () => {
             
           </Box>
           <Stack spacing={1} direction="row" sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-          <Button variant="contained"> 
-                  <Link style={{ textDecoration: 'none', color: '#fff' }} to="/profile">
-                    My Profile
-                  </Link></Button>
-              <Button variant="contained"> 
-                <Link style={{ textDecoration: 'none', color: '#fff' }} to="/register">
-                  Sign In
-                </Link></Button>
-              <Button variant="contained">
-                <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
-                  Login
-                </Link>
-              </Button>
+            {
+              isUserLogin === "Login Success" ? 
+              (
+                <>
+                  <Button variant="contained"> 
+                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/profile">
+                      My Profile
+                    </Link>
+                  </Button>
+                  <Button variant="contained" color="error" onClick={onLogoutClick}> 
+                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
+                      Logout
+                    </Link>
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button variant="contained"> 
+                  <Link style={{ textDecoration: 'none', color: '#fff' }} to="/register">
+                    Sign In
+                  </Link>
+                  </Button>
+                  <Button variant="contained">
+                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
+                      Login
+                    </Link>
+                  </Button>
+                </>
+              ) 
+            }    
             </Stack>
         </Toolbar>
       </Container>

@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import FormProfile from "../../components/FormProfile/EditProfile.component";
-import NavBar from "../../components/navbar/navbarlogin.component";
+import NavBar from "../../components/navbar/navbar.component";
 
 const Register = () => {
     return(
