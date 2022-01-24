@@ -8,6 +8,7 @@ import RPSGame from  './pages/RPSGame/RPSGame';
 import HomePage from  './pages/HomePage/HomePage';
 import GameHistory from  './pages/GameHistory/GameHistory';
 import GameList from './pages/GameList/GameList';
+import { ProtectedRoute } from './Protectedroute';
 
 function App() {
   return (

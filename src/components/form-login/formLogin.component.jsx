@@ -6,6 +6,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {postLoginAxios} from '../../services/login.service';
 
 import { useForm, Controller } from "react-hook-form";
 import { TextField, Checkbox, Input } from "@material-ui/core";
@@ -26,8 +27,12 @@ export default function FormLogin() {
       password: ''
     }
   });
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    const dataJSON = JSON.stringify(data);
+    postLoginAxios(dataJSON);
+  };
 
+  ;
   const gridFormStyle = {
     padding: "50px"
   }
