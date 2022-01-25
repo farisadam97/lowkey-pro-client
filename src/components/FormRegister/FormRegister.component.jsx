@@ -5,11 +5,14 @@ import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useForm,handleSubmit} from "react-hook-form";
+import {postRegisterAxios} from '../../services/auth.service';
+
 
 const FormRegister = () => {
     const { register,formState: { errors }, handleSubmit,setError} = useForm();
     const onSubmit = data => {
-
+        const dataJSON = JSON.stringify(data);
+        postRegisterAxios(dataJSON);
         console.log(data)
     };
 
@@ -22,10 +25,10 @@ const FormRegister = () => {
                         type="text" 
                         disableUnderline={true} 
                         sx={{border:1, px:1,borderRadius:1,width:"100%"}} 
-                        name="fullname" 
+                        name="name" 
                         placeholder="e.g : John Doe"  
                         autoComplete=""
-                        {...register("fullname", { required: true})}
+                        {...register("name", { required: true})}
                     >
 
                     </Input>

@@ -6,7 +6,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import {postLoginAxios} from '../../services/login.service';
+import {postLoginAxios} from '../../services/auth.service';
 
 import { useForm, Controller } from "react-hook-form";
 import { TextField, Checkbox, Input } from "@material-ui/core";
