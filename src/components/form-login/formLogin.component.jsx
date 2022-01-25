@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {postLoginAxios} from '../../services/auth.service';
+import { Link } from 'react-router-dom';
 
 import { useForm, Controller } from "react-hook-form";
 import { TextField, Checkbox, Input } from "@material-ui/core";
@@ -78,7 +79,11 @@ export default function FormLogin() {
             }
             <br/>
             <Button type="submit" variant="contained" sx={{width:"100%" , my:2}}>Submit</Button>
-            <p style={{textAlign: "right"}}>Lost Password? | Register Now!</p>
+            <p style={{textAlign: "right"}}>
+              <Link style={{ color: 'black' }} to="/register">
+                Register Now!
+              </Link>
+            </p>
           </form>
         </Container>
       </CardContent>

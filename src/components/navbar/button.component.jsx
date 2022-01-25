@@ -35,7 +35,7 @@ export const ButtonNavbar = () =>{
                 <>
                   <Button variant="contained"> 
                   <Link style={{ textDecoration: 'none', color: '#fff' }} to="/register">
-                    Sign In
+                    Sign Up
                   </Link>
                   </Button>
                   <Button variant="contained">
