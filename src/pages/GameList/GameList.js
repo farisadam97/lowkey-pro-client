@@ -3,13 +3,11 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import GameCard from '../../components/GameCard/GameCard';
 import './GameList.css'
-import { styled } from '@mui/system';
+// import { styled } from '@mui/system';
 import ResponsiveAppBar from '../../components/navbar/navbar.component';
 
 
-const styledDiv = styled("div")({
-    backgroundColor:'black'
-})
+
 
 const GameList = () => {
 
