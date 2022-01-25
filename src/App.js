@@ -12,12 +12,6 @@ import { ProtectedRoute } from './Protectedroute';
 
 function App() {
   return (
-    // <div className="App">
-    //   <FirstPage></FirstPage>
-
-    //   <h1>{process.env.REACT_APP_API_URL}</h1>
-    //   <h1>{process.env.REACT_APP_API_KEY}</h1>
-    // </div>
     <div>
       <BrowserRouter>
         <Routes>
@@ -25,9 +19,23 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/top-score" element={<TopScore/>} />
           <Route path="/register" element={<Register/>} />
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/rps-game" element={<RPSGame/>} />
-          <Route path="/home-page" element={<HomePage/>} />
+
+          <Route path="/profile" element={<ProtectedRoute/>} >
+            <Route path="/profile" element={<Profile/>} />
+          </Route>
+
+          <Route path="/rps-game" element={<ProtectedRoute/>} >
+            <Route path="/rps-game" element={<RPSGame/>} />
+          </Route>
+
+          <Route path="/home-page" element={<ProtectedRoute/>} >
+            <Route path="/home-page" element={<HomePage/>} />
+          </Route>
+
+          <Route path="/game-history" element={<ProtectedRoute/>} >
+            <Route path="/game-history" element={<GameHistory/>} />
+          </Route>
+          
           <Route path="/game-history" element={<GameHistory/>} />
           <Route path="/game-list" element={<GameList/>} />
         </Routes>
