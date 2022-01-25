@@ -10,10 +10,8 @@ const Register = () => {
         <div>
              <NavBar />
         <Container maxWidth="xl">
-            <Box sx={{ mt:3 ,  height: '100vh' }} >
-                <Typography variant="h3" component="div" gutterBottom>
-                    Register Page
-                </Typography>
+            <Box sx={{ mt:3  }} >
+                <h1>Register Page</h1>
                 <FormRegister />
             </Box>
         </Container>

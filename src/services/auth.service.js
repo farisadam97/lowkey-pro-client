@@ -27,3 +27,24 @@ export const postLoginAxios = async (bodyReq) => {
         console.log(error)
     }
 }
+
+export const postRegisterAxios = async (bodyReq) => {
+  try {
+    Axios({
+      method: 'post',
+      url: `${baseURL}/players`,
+      data: bodyReq,
+      headers: {"Content-Type": "application/json"}
+    })
+    .then(function(response){
+      console.log(response.data)
+      alert("Akun anda sudah terdaftar, silahkan login.")
+      window.location = '/login'
+    }).catch(function (error) {
+      alert(error.response.data.message);
+    });
+
+  } catch (error) {
+    
+  }
+}
