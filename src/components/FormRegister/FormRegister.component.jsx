@@ -4,12 +4,12 @@ import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useForm,handleSubmit} from "react-hook-form";
+import { useForm} from "react-hook-form";
 import {postRegisterAxios} from '../../services/auth.service';
 
 
 const FormRegister = () => {
-    const { register,formState: { errors }, handleSubmit,setError} = useForm();
+    const { register,formState: { errors }, handleSubmit} = useForm();
     const onSubmit = data => {
         const dataJSON = JSON.stringify(data);
         postRegisterAxios(dataJSON);
