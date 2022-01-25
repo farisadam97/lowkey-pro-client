@@ -40,7 +40,7 @@ const HomePage = () => {
 		setIsOpened3(false);
 		setIsOpened4(wasOpened => !wasOpened);
 	}
-
+	var currentuser_name = localStorage.getItem('name')
     return (
 		<div>
 			<ResponsiveAppBar />
@@ -57,7 +57,7 @@ const HomePage = () => {
 									xs: 20
 								}}
 							>
-								Welcome Hani!
+								Welcome {currentuser_name}!
 							</Typography> 
 							<Typography color="white"
 								fontSize={{

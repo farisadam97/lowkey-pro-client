@@ -22,6 +22,7 @@ import imgkertas from '../../images/kertas.png';
 import imggunting from '../../images/gunting.png';
 import imgrefresh from '../../images/refresh.png';
 import trophy from '../../images/trophy.png';
+import {postScoreAxios} from '../../services/game.score.service';
 
 const RPSGame = () => {
 	let [game, setGame] = useState({
@@ -52,27 +53,48 @@ const RPSGame = () => {
 		if (pcScore < winTarget) {
 		  const userSelection = e.target.parentNode.getAttribute("value");
 		  const pcSelection = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
+		  
+			var resulttoupdate = "";
+			var scoretoupdate = 0;
+			
+			if(userSelection === pcSelection)
+			{
+				setGame({
+					...(game.message = tieMessage),
+				})
+				resulttoupdate = "DRAW";
+			}
+			else
+			{
+				if((userSelection === "Rock" && pcSelection === "Scissors") || (userSelection === "Paper" && pcSelection === "Rock") || (userSelection === "Scissors" && pcSelection === "Paper"))
+				{
+					setGame({
+						...(game.userScore += 1),
+						...(game.message = winMessage),
+					})
+					resulttoupdate = "WIN";
+					scoretoupdate = 1;
+				}
+				else
+				{
+					setGame({
+						...(game.pcScore += 1),
+						...(game.message = lostMessage),
+					});
+					resulttoupdate = "LOSE";
+				}
+			}
 	
-		  userSelection === pcSelection
-			? setGame({
-				...(game.message = tieMessage),
-			  })
-			: (userSelection === "Rock" && pcSelection === "Scissors") || (userSelection === "Paper" && pcSelection === "Rock") || (userSelection === "Scissors" && pcSelection === "Paper")
-			? setGame({
-				...(game.userScore += 1),
-				...(game.message = winMessage),
-			  })
-			: setGame({
-				...(game.pcScore += 1),
-				...(game.message = lostMessage),
-			  });
-	
-		  setGame({
-			...game,
-			round: (game.round += 1),
-			userSelection,
-			pcSelection,
-		  });
+			setGame({
+				...game,
+				round: (game.round += 1),
+				userSelection,
+				pcSelection,
+			});
+			const currentuserid = localStorage.getItem('id');
+			var currentyear = new Date().getFullYear();
+			const datatoupdate = {user_id: currentuserid, game_id: 1, result: resulttoupdate, score: scoretoupdate, game_date: currentyear};
+			postScoreAxios(JSON.stringify(datatoupdate));
 		}
 	}; 
     return (
