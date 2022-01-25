@@ -46,7 +46,7 @@ export default class GameHistoriesStats extends Component {
 			  })
 			}
 			<div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
-				<div class="game-statistics-box">
+				<div className="game-statistics-box">
 					<Typography color="#03b345" fontWeight="bold"
 						fontSize={{
 							lg: 50,
@@ -69,7 +69,7 @@ export default class GameHistoriesStats extends Component {
 						Win(s)
 					</Typography>
 				</div>
-				<div class="game-statistics-box">
+				<div className="game-statistics-box">
 					<Typography color="red" fontWeight="bold"
 						fontSize={{
 							lg: 50,
@@ -92,7 +92,7 @@ export default class GameHistoriesStats extends Component {
 						Lose(s)
 					</Typography>
 				</div>
-				<div class="game-statistics-box">
+				<div className="game-statistics-box">
 					<Typography fontWeight="bold"
 						fontSize={{
 							lg: 50,

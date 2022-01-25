@@ -33,7 +33,7 @@ export default class GameHistories extends Component {
         return this.state.gameHistoriesCollection.sort((a, b) => a.id > b.id ? 1:-1).map((data, i) => {
 			
 			return (
-				<div key={i} class="tableleaderboardrow" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gridGap: 20 }}>
+				<div key={i} className="tableleaderboardrow" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gridGap: 20 }}>
 					<div>
 						<Typography 
 							fontSize={{

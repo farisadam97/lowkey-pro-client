@@ -45,10 +45,10 @@ const HomePage = () => {
 		<div>
 			<ResponsiveAppBar />
 			
-			<div class="page-home" style={{ backgroundImage: 'url(' + imghomebg + ')'}}>
+			<div className="page-home" style={{ backgroundImage: 'url(' + imghomebg + ')'}}>
 				<Container maxWidth="xl">
 					<div>
-						<div class="desktopalignright">
+						<div className="desktopalignright">
 							<Typography variant="h3" color="#1976d2"
 								fontSize={{
 									lg: 50,
@@ -71,12 +71,12 @@ const HomePage = () => {
 							</Typography>
 						</div>
 						<br />
-						<div class="mobile-full" style={{ display:"flex" }}>
+						<div className="mobile-full" style={{ display:"flex" }}>
 							
-							<div class="home-left">
+							<div className="home-left">
 								
 								{isOpened1 && (
-									<div class="box-content">
+									<div className="box-content">
 										<Typography variant="h4" color="#1976d2"
 											fontSize={{
 												lg: 32,
@@ -103,7 +103,7 @@ const HomePage = () => {
 									</div>
 								)}
 								{isOpened2 && (
-									<div class="box-content">
+									<div className="box-content">
 										<Typography variant="h4" color="#1976d2"
 											fontSize={{
 												lg: 32,
@@ -130,7 +130,7 @@ const HomePage = () => {
 									</div>
 								)}
 								{isOpened3 && (
-									<div class="box-content">
+									<div className="box-content">
 										<Typography variant="h4" color="#1976d2"
 											fontSize={{
 												lg: 32,
@@ -157,7 +157,7 @@ const HomePage = () => {
 									</div>
 								)}
 								{isOpened4 && (
-									<div class="box-content">
+									<div className="box-content">
 										<Typography variant="h4" color="#1976d2"
 											fontSize={{
 												lg: 32,
@@ -184,9 +184,9 @@ const HomePage = () => {
 									</div>
 								)}
 							</div>
-							<div class="home-right">
+							<div className="home-right">
 								
-								<div class="home-page-boxes">
+								<div className="home-page-boxes">
 									<Link to="#" style={{ textDecoration: 'none' }} onClick={toggle1}>
 										<div>
 											<i className='fa fa-user'></i>

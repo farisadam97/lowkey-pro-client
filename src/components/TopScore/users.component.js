@@ -29,7 +29,7 @@ export default class Users extends Component {
 				img = (<Fragment><img src={trophyIcon} className='trophyicon' alt='trophy' /></Fragment>);
 			}
 			return (
-				<div key={i} class="tableleaderboardrow" style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
+				<div key={i} className="tableleaderboardrow" style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
 					<div>
 						<Typography 
 							fontSize={{
