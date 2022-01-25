@@ -32,15 +32,16 @@ export default class GameHistoriesStats extends Component {
 		return (
 		  <div>
 			{
-			  gameHistoriesToRender.map((data, index) => {
-				if (data.result == "WIN") {
-					countwin++;
+			  gameHistoriesToRender.map(
+				(data, index) => {
+				if (data.result === "WIN") {
+					return countwin++;
 				}
-				else if (data.result == "LOSE") {
-					countlose++;
+				else if (data.result === "LOSE") {
+					return countlose++;
 				}
 				else {
-					countdraw++;
+					return countdraw++;
 				}
 			  })
 			}

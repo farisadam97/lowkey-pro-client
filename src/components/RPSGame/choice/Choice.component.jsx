@@ -109,7 +109,7 @@ export const ChoiceComputer = ({ pcScore, userSelection, pcSelection, id, classN
                    {
                         pcSelection === "Rock" ? 
                         (<div>
-                            <img className={className, activeimg} id={id} src={imgbatu} alt="icon" />
+                            <img className={[className, activeimg].join(" ")} id={id} src={imgbatu} alt="icon" />
                         </div>) : 
                         (<div>
                         <img className={className} id={id} src={imgbatu} alt="icon" />
@@ -118,7 +118,7 @@ export const ChoiceComputer = ({ pcScore, userSelection, pcSelection, id, classN
                     {
                         pcSelection === "Paper" ? 
                         (<div>
-                            <img className={className, activeimg} id={id} src={imgkertas} alt="icon" />
+                            <img className={[className, activeimg].join(" ")} id={id} src={imgkertas} alt="icon" />
                         </div>) : 
                         (<div>
                             <img className={className} id={id} src={imgkertas} alt="icon" />
@@ -127,7 +127,7 @@ export const ChoiceComputer = ({ pcScore, userSelection, pcSelection, id, classN
                     {   
                          pcSelection === "Scissors" ? 
                         (<div>
-                            <img className={className, activeimg} id={id} src={imggunting} alt="icon" />
+                            <img className={[className, activeimg].join(" ")} id={id} src={imggunting} alt="icon" />
                         </div>) :
                         (<div>
                             <img className={className} id={id} src={imggunting} alt="icon" />

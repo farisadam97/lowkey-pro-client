@@ -1,18 +1,16 @@
 import React, {useState, useEffect} from "react";
-import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-import { useForm,handleSubmit} from "react-hook-form";
-import styles from "./Editprofile.module.css";
+import { useForm} from "react-hook-form";
 import { FormGroup, Container, Grid } from "@mui/material";
 import { getPlayersById, updatePlayerById } from "../../services/user.service";
 
 const FormRegister = () => {
 
-    const { register,formState: { errors }, handleSubmit,setError} = useForm();
+    const { register,formState: { errors }, handleSubmit} = useForm();
     const onSubmit = data => {
         updatePlayerById(data);
         console.log(data);
