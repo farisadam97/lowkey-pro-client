@@ -13,21 +13,13 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
+import {ButtonNavbar} from './button.component';
 
 const pages = [
   {name: "Home", route: "/"}, 
   {name: "Game List", route: "/game-list"}, 
-  {name: "Top Score", route: "/top-score"}, 
-  {name: "About Us", route: "/about"}, 
+  {name: "Top Score", route: "/top-score"},
 ];
-/* const pages = [
-  {name: "Home", route: "/"}, 
-  {name: "Game List", route: "/game-list"}, 
-  {name: "Feature", route: "/feature"}, 
-  {name: "System Requirement", route: "/system-requirement"},
-  {name: "Top Score", route: "/top-score"}, 
-  {name: "News Latter", route: "/news-latter"}, 
-]; */
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -44,13 +36,7 @@ const ResponsiveAppBar = () => {
     background: "black",
     opacity: 0.8
   }
-  const onLogoutClick =  (e) => {
-    e.preventDefault();
-    window.localStorage.clear();
-    alert("Anda telah logout");
-  }
-  const isUserLogin = localStorage.getItem('status');
-  console.log(isUserLogin)
+ 
   return (
     <AppBar position="static" style={navbarStyle}>
       <Container maxWidth="xl">
@@ -107,36 +93,7 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
               ))}
               <Stack spacing={1} direction="row">
-              {
-              isUserLogin === "Login Success" ? 
-              (
-                <>
-                  <Button variant="contained"> 
-                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/profile">
-                      My Profile
-                    </Link>
-                  </Button>
-                  <Button variant="contained" color="error" onClick={onLogoutClick}> 
-                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
-                      Logout
-                    </Link>
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button variant="contained"> 
-                  <Link style={{ textDecoration: 'none', color: '#fff' }} to="/register">
-                    Sign In
-                  </Link>
-                  </Button>
-                  <Button variant="contained">
-                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
-                      Login
-                    </Link>
-                  </Button>
-                </>
-              ) 
-            }
+                <ButtonNavbar />
               </Stack> 
             </Menu> 
           </Box>
@@ -168,37 +125,8 @@ const ResponsiveAppBar = () => {
             
           </Box>
           <Stack spacing={1} direction="row" sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-            {
-              isUserLogin === "Login Success" ? 
-              (
-                <>
-                  <Button variant="contained"> 
-                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/profile">
-                      My Profile
-                    </Link>
-                  </Button>
-                  <Button variant="contained" color="error" onClick={onLogoutClick}> 
-                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
-                      Logout
-                    </Link>
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button variant="contained"> 
-                  <Link style={{ textDecoration: 'none', color: '#fff' }} to="/register">
-                    Sign In
-                  </Link>
-                  </Button>
-                  <Button variant="contained">
-                    <Link style={{ textDecoration: 'none', color: '#fff' }} to="/login">
-                      Login
-                    </Link>
-                  </Button>
-                </>
-              ) 
-            }    
-            </Stack>
+            <ButtonNavbar />
+          </Stack>
         </Toolbar>
       </Container>
     </AppBar>
