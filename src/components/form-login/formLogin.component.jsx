@@ -1,8 +1,6 @@
-import React, {useState} from "react";
-import Box from '@mui/material/Box';
+import React from "react";
 import Card from '@mui/material/Card';
 import Container from '@mui/material/Container';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -10,19 +8,11 @@ import {postLoginAxios} from '../../services/auth.service';
 import { Link } from 'react-router-dom';
 
 import { useForm, Controller } from "react-hook-form";
-import { TextField, Checkbox, Input } from "@material-ui/core";
+import { Input } from "@material-ui/core";
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
 
 export default function FormLogin() {
-  const { handleSubmit, formState: { errors }, control, reset } = useForm({
+  const { handleSubmit, formState: { errors }, control } = useForm({
     defaultValues: {
       username: '',
       password: ''
@@ -39,7 +29,6 @@ export default function FormLogin() {
   }
 
   const textFieldStyle = {
-    width: '60%',
     marginBottom: "20px",
     border: 1, 
     px: 1,

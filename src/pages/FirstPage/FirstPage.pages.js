@@ -18,7 +18,7 @@ const FirstPage = () => {
     return (
 		<div>
 			<ResponsiveAppBar />
-			<div class="section-home">
+			<div className="section-home">
 				<Container maxWidth="xl">
 					<Typography textAlign="center" color="white" variant="h1"
 						paddingTop={{
@@ -50,12 +50,12 @@ const FirstPage = () => {
 							xs: 15
 						}}
 					>Experience new traditional game play</Typography>
-					<div class="section-home-button">
+					<div className="section-home-button">
 						<Link to="/game-list" style={{ textDecoration: 'none' }}><Button variant="contained" style={{padding:'20px 50px'}}>Play Now</Button></Link>
 					</div>
 				</Container>
 			</div>
-			<div class="section-home-arrow">
+			<div className="section-home-arrow">
 				<Link to="/game-list" style={{ textDecoration: 'none' }}>
 					<Typography color="white" variant="h6"
 						fontSize={{
@@ -70,11 +70,11 @@ const FirstPage = () => {
 					<img src={imgscrolldown} alt="Scroll Down"/>
 				</Link>
 			</div>
-			<div class="section-feature">
+			<div className="section-feature">
 				<Container maxWidth="xl">
-					<div class="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 }}>
+					<div className="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 }}>
 						<div><img src={imgfeature} alt="Feature"/></div>
-						<div class="mobile-padding-top-50">
+						<div className="mobile-padding-top-50">
 							<Typography color="white" variant="h6"
 								fontSize={{
 									lg: 20,
@@ -159,9 +159,9 @@ const FirstPage = () => {
 				</Container>
 			</div>
 			
-			<div class="section-system-requirement">
+			<div className="section-system-requirement">
 				<Container maxWidth="xl">
-					<div class="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 }}>
+					<div className="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 }}>
 						<div>
 							<Typography color="white" variant="h3"
 								fontSize={{
@@ -180,9 +180,9 @@ const FirstPage = () => {
 				</Container>
 			</div>
 			
-			<div class="section-top-score">
+			<div className="section-top-score">
 				<Container maxWidth="xl">
-					<div class="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 120 }}>
+					<div className="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 120 }}>
 						<div>
 							<Typography color="white" variant="h3" 
 								paddingTop={{
@@ -215,13 +215,13 @@ const FirstPage = () => {
 							<Link to="/top-score" style={{ textDecoration: 'none' }}><Button variant="contained" style={{width:'100%',padding:'10px',maxWidth:'300px'}}>See More</Button></Link>
 							
 						</div>
-						<div class="mobile-padding-top-50">
-							<div class="card mb-4 card1">
-								<div class="card-body">
-									<div class="card-col-1">
-										<img class="section-person-img" src={imgtestimonial1} alt="Testimonial 1"/>
+						<div className="mobile-padding-top-50">
+							<div className="card mb-4 card1">
+								<div className="card-body">
+									<div className="card-col-1">
+										<img className="section-person-img" src={imgtestimonial1} alt="Testimonial 1"/>
 									</div>
-									<div class="card-col-2">
+									<div className="card-col-2">
 										<Typography color="orange" 
 											fontSize={{
 												lg: 24,
@@ -243,7 +243,7 @@ const FirstPage = () => {
 											PC Gamer
 										</Typography>
 									</div>
-									<div class="card-col-3">
+									<div className="card-col-3">
 										<Link to="https://twitter.com/" style={{ textDecoration: 'none' }} target="_blank"><img src={imgtwitter} alt="Twitter"/></Link>
 									</div>
 									<div style={{clear:"both"}}></div>
@@ -269,12 +269,12 @@ const FirstPage = () => {
 									</Typography>
 								</div>
 							</div>
-							<div class="card mb-4 card2">
-								<div class="card-body">
-									<div class="card-col-1">
-										<img class="section-person-img" src={imgtestimonial2} alt="Testimonial 1"/>
+							<div className="card mb-4 card2">
+								<div className="card-body">
+									<div className="card-col-1">
+										<img className="section-person-img" src={imgtestimonial2} alt="Testimonial 1"/>
 									</div>
-									<div class="card-col-2">
+									<div className="card-col-2">
 										<Typography color="orange" 
 											fontSize={{
 												lg: 24,
@@ -296,7 +296,7 @@ const FirstPage = () => {
 											Nerdreactor
 										</Typography>
 									</div>
-									<div class="card-col-3">
+									<div className="card-col-3">
 										<Link to="https://twitter.com/" style={{ textDecoration: 'none' }} target="_blank"><img src={imgtwitter} alt="Twitter"/></Link>
 									</div>
 									<div style={{clear:"both"}}></div>
@@ -322,12 +322,12 @@ const FirstPage = () => {
 									</Typography>
 								</div>
 							</div>
-							<div class="card card3">
-								<div class="card-body">
-									<div class="card-col-1">
-										<img class="section-person-img" src={imgtestimonial3} alt="Testimonial 1"/>
+							<div className="card card3">
+								<div className="card-body">
+									<div className="card-col-1">
+										<img className="section-person-img" src={imgtestimonial3} alt="Testimonial 1"/>
 									</div>
-									<div class="card-col-2">
+									<div className="card-col-2">
 										<Typography color="orange" 
 											fontSize={{
 												lg: 24,
@@ -349,7 +349,7 @@ const FirstPage = () => {
 											Uproxx
 										</Typography>
 									</div>
-									<div class="card-col-3">
+									<div className="card-col-3">
 										<Link to="https://twitter.com/" style={{ textDecoration: 'none' }} target="_blank"><img src={imgtwitter} alt="Twitter"/></Link>
 									</div>
 									<div style={{clear:"both"}}></div>
@@ -380,9 +380,9 @@ const FirstPage = () => {
 				</Container>
 			</div>
 			
-			<div class="section-newsletter">
+			<div className="section-newsletter">
 				<Container maxWidth="xl">
-					<div class="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 }}>
+					<div className="mobile-full" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 }}>
 						<div style={{ textAlign: "center" }}><img src={imgnewsletter} alt="Newsletter"/></div>
 						<div>
 							<Typography color="white" variant="h6"

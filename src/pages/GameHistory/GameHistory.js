@@ -10,7 +10,7 @@ const GameHistory = () => {
 		<div>
 			<ResponsiveAppBar />
 			
-			<div class="page-top-score">
+			<div className="page-top-score">
 				<Container maxWidth="xl">
 					<div>
 						<Typography variant="h3"
@@ -37,7 +37,7 @@ const GameHistory = () => {
 						<br /><br />
 						<GameHistoriesStats />
 						
-						<div class="tableleaderboardhead" style={{ borderBottom:"1px solid black", paddingTop:"30px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gridGap: 20 }}>
+						<div className="tableleaderboardhead" style={{ borderBottom:"1px solid black", paddingTop:"30px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gridGap: 20 }}>
 							<div>
 								<Typography variant="h3"
 									fontSize={{
@@ -88,7 +88,7 @@ const GameHistory = () => {
 							</div>
 						</div>
 							
-						<div class="tablegamehistory">
+						<div className="tablegamehistory">
 							<GameHistories />
 						</div>
 					</div>

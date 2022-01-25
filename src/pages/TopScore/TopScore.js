@@ -9,7 +9,7 @@ const TopScore = () => {
 		<div>
 			<ResponsiveAppBar />
 			
-			<div class="page-top-score">
+			<div className="page-top-score">
 				<Container maxWidth="xl">
 					<div>
 						<Typography variant="h3"
@@ -35,7 +35,7 @@ const TopScore = () => {
 						
 						<br /> <br />
 						
-						<div class="tableleaderboardhead" style={{ borderBottom:"1px solid black", paddingTop:"50px", display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
+						<div className="tableleaderboardhead" style={{ borderBottom:"1px solid black", paddingTop:"50px", display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: 20 }}>
 							<div>
 								<Typography variant="h3"
 									fontSize={{
@@ -110,7 +110,7 @@ const TopScore = () => {
 							</div>
 						</div>
 						
-						<div class="tableleaderboard">
+						<div className="tableleaderboard">
 							<Users />
 						</div>
 					</div>
