@@ -61,11 +61,11 @@ const FormRegister = () => {
                                 type="text" 
                                 disableUnderline={true} 
                                 sx={{border:1, px:1,borderRadius:1,width:"100%"}} 
-                                name="fullname" 
+                                name="name" 
                                 placeholder="e.g : John Doe"  
                                 autoComplete=""
                                 defaultValue={playerData.name || undefined}
-                                {...register("fullname", { required: true})}
+                                {...register("name", { required: true})}
                             >
 
                             </Input>
